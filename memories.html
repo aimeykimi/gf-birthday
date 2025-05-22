@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories</title>
+
+    <!-- link stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .media-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .media-box {
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .media-box video,
+        .media-box img {
+            width: 100%;
+            border-radius: 8px;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .btn {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- home button -->
+    <a href="index.html">
+        <button class="btn" type="button">HOME</button>
+    </a>
+
+    <audio id="bg-music" autoplay loop>
+        <source src="music/everything.mp4" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <div style="text-align:center; margin-top: 20px;">
+        <button class="btn" onclick="document.getElementById('bg-music').play()">Play Music</button>
+    </div>
+    
+    <h1>My Favorite Memories With You</h1>
+
+    <div class="media-container">
+        <!-- Video 1 -->
+        <div class="media-box">
+            <video controls>
+                <source src="video/vid1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="caption">My GF Cute</div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="media-box">
+            <video controls>
+                <source src="video/vid2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="caption">First Video Together</div>
+        </div>
+
+        <!-- Image 1 -->
+        <div class="media-box">
+            <img src="pictures/crochet.jpeg" alt="Memory 1">
+            <div class="caption">Matching Crochet</div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="media-box">
+            <img src="pictures/date1.jpeg" alt="Memory 2">
+            <div class="caption">First Picture Together</div>
+        </div>
+    </div>
+</body>
+</html>
